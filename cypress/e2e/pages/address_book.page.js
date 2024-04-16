@@ -11,7 +11,7 @@ export const editEntryBtn = 'button[aria-label="Edit entry"]'
 export const deleteEntryBtn = 'button[aria-label="Delete entry"]'
 export const deleteEntryModalBtnSection = '.MuiDialogActions-root'
 export const tableContainer = '[data-testid="table-container"]'
-const tableRow = '[data-testid="table-row"]'
+export const tableRow = '[data-testid="table-row"]'
 const importBtn = '[data-testid="import-btn"]'
 const cancelImportBtn = '[data-testid="cancel-btn"]'
 const uploadErrorMsg = '[data-testid="error-message"]'
@@ -223,7 +223,7 @@ export function verifyEditedNameNotExists(name) {
 }
 
 export function clickOnWhatsNewBtn(force = false) {
-  cy.contains(whatsNewBtnStr).click({ force: force })
+  cy.contains(whatsNewBtnStr).click({ force })
 }
 
 export function acceptBeamerCookies() {
