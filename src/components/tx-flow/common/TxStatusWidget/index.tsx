@@ -9,7 +9,7 @@ import classnames from 'classnames'
 import css from './styles.module.css'
 import CloseIcon from '@mui/icons-material/Close'
 import useWallet from '@/hooks/wallets/useWallet'
-import SafeLogo from '@/public/images/logo-no-text.svg'
+import SafeLogo from '@/public/images/logo-text.svg'
 import { SafeTxContext } from '@/components/tx-flow/SafeTxProvider'
 
 const TxStatusWidget = ({

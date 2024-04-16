@@ -73,7 +73,7 @@ export const CookieBanner = ({
           <Grid item xs>
             <Typography variant="body2" mb={2}>
               By clicking &quot;Accept all&quot; you agree to the use of the tools listed below and their corresponding
-              cookies. <ExternalLink href={AppRoutes.cookie}>Cookie policy</ExternalLink>
+              cookies.
             </Typography>
 
             <Grid container alignItems="center" gap={4}>
@@ -82,16 +82,6 @@ export const CookieBanner = ({
                   <CookieCheckbox checkboxProps={{ id: 'necessary', disabled: true }} label="Necessary" checked />
                   <br />
                   <Typography variant="body2">Locally stored data for core functionality</Typography>
-                </Box>
-
-                <Box mb={2}>
-                  <CookieCheckbox
-                    checkboxProps={{ ...register(CookieType.UPDATES), id: 'beamer' }}
-                    label="Beamer"
-                    checked={watch(CookieType.UPDATES)}
-                  />
-                  <br />
-                  <Typography variant="body2">New features and product announcements</Typography>
                 </Box>
 
                 <Box>

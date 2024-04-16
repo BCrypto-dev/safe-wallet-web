@@ -2,7 +2,7 @@ import { AppRoutes } from '@/config/routes'
 import { useHasFeature } from '@/hooks/useChains'
 import { FEATURES } from '@/utils/chains'
 import { Paper, SvgIcon, Typography, Divider, Box, Skeleton, Button, Link } from '@mui/material'
-import SafeLogo from '@/public/images/logo-text.svg'
+import SafeLogo from '@/public/images/logo.svg'
 import dynamic from 'next/dynamic'
 import css from './styles.module.css'
 import { useRouter } from 'next/router'
@@ -45,7 +45,7 @@ const WelcomeLogin = () => {
   return (
     <Paper className={css.loginCard} data-testid="welcome-login">
       <Box className={css.loginContent}>
-        <SvgIcon component={SafeLogo} inheritViewBox sx={{ height: '24px', width: '80px', ml: '-8px' }} />
+        <SvgIcon component={SafeLogo} inheritViewBox sx={{ height: '128px', width: '256px', ml: '-8px' }} />
 
         <Typography variant="h6" mt={6} fontWeight={700}>
           Get started

@@ -8,7 +8,7 @@ export const RELAY_SPONSORS = {
   },
   default: {
     name: 'Safe',
-    logo: '/images/logo-no-text.svg',
+    logo: '/images/logo-text.svg',
   },
 }
 

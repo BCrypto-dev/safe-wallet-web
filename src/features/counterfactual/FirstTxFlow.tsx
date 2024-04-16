@@ -16,7 +16,7 @@ import AssetsIcon from '@/public/images/sidebar/assets.svg'
 import SaveAddressIcon from '@/public/images/common/save-address.svg'
 import RecoveryPlus from '@/public/images/common/recovery-plus.svg'
 import SwapIcon from '@/public/images/common/swap.svg'
-import SafeLogo from '@/public/images/logo-no-text.svg'
+import SafeLogo from '@/public/images/logo-text.svg'
 import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined'
 
 const FirstTxFlow = ({ open, onClose }: { open: boolean; onClose: () => void }) => {

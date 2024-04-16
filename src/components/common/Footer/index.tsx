@@ -48,43 +48,30 @@ const Footer = (): ReactElement | null => {
         {IS_OFFICIAL_HOST || IS_DEV ? (
           <>
             <li>
-              <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
+              <Typography variant="caption">&copy;{new Date().getFullYear()} Bitrock Safe</Typography>
             </li>
             <li>
-              <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
+              <ExternalLink href="https://www.bit-rock.io/" noIcon sx={{ span: { textDecoration: 'underline' } }}>
+                Bitrock Network
+              </ExternalLink>
             </li>
             <li>
-              <FooterLink href={getHref(AppRoutes.privacy)}>Privacy</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.licenses)}>Licenses</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
+              <ExternalLink href="https://docs.bit-rock.io/" noIcon sx={{ span: { textDecoration: 'underline' } }}>
+                Bitrock Documentation
+              </ExternalLink>
             </li>
             <li>
               <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
             </li>
-            <li>
-              <ExternalLink href={HELP_CENTER_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
-                Help
-              </ExternalLink>
-            </li>
           </>
         ) : (
-          <li>{'This is an unofficial distribution of Safe{Wallet}'}</li>
+          <li>{'This is an unofficial distribution of Bitrock Safe'}</li>
         )}
 
         <li>
           <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} noIcon>
             <SvgIcon component={GitHubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} /> v{packageJson.version}
           </ExternalLink>
-        </li>
-        <li>
-          <AppstoreButton placement="footer" />
         </li>
       </ul>
     </footer>

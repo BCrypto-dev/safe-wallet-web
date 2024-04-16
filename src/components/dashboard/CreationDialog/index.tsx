@@ -6,7 +6,6 @@ import HomeIcon from '@/public/images/sidebar/home.svg'
 import TransactionIcon from '@/public/images/sidebar/transactions.svg'
 import AppsIcon from '@/public/images/sidebar/apps.svg'
 import SettingsIcon from '@/public/images/sidebar/settings.svg'
-import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
 import { useRemoteSafeApps } from '@/hooks/safe-apps/useRemoteSafeApps'
 import { useCurrentChain } from '@/hooks/useChains'
@@ -44,7 +43,7 @@ const CreationDialog = () => {
     <Dialog open={open}>
       <DialogContent sx={{ paddingX: 8, paddingTop: 9, paddingBottom: 6 }}>
         <Typography variant="h3" fontWeight="700" mb={1}>
-          Welcome to {'Safe{Wallet}'}!
+          Welcome to {'Bitrock Safe'}!
         </Typography>
         <Typography variant="body2">
           Congratulations on your first step to truly unlock ownership. Enjoy the experience and discover our app.
@@ -67,7 +66,6 @@ const CreationDialog = () => {
             title="Settings"
             description="Want to change your Safe Account setup? Settings is the right place to go."
           />
-          <HintItem Icon={BeamerIcon} title="What's new" description="Don't miss any future Safe updates." />
           <HintItem
             Icon={HelpCenterIcon}
             title="Help center"

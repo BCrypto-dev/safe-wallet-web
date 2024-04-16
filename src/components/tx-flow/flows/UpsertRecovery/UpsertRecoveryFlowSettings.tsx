@@ -65,11 +65,11 @@ export function UpsertRecoveryFlowSettings({
   // RHF's dirty check is tempermental with our address input dropdown
   const isDirty = delayModifier
     ? // Updating settings
-      !sameAddress(recoverer, delayModifier.recoverers[0]) ||
-      delayModifier.delay !== BigInt(delay) ||
-      delayModifier.expiry !== BigInt(expiry)
+    !sameAddress(recoverer, delayModifier.recoverers[0]) ||
+    delayModifier.delay !== BigInt(delay) ||
+    delayModifier.expiry !== BigInt(expiry)
     : // Setting up recovery
-      recoverer && delay && expiry
+    recoverer && delay && expiry
 
   const validateRecoverer = (recoverer: string) => {
     if (sameAddress(recoverer, safeAddress)) {
@@ -207,7 +207,7 @@ export function UpsertRecoveryFlowSettings({
           <TxCard>
             <FormControlLabel
               data-testid="warning-section"
-              label="I understand that the Recoverer will be able to initiate recovery of this Safe Account and that I will only be informed within the Safe{Wallet}."
+              label="I understand that the Recoverer will be able to initiate recovery of this Safe Account and that I will only be informed within the Bitrock Safe."
               control={<Checkbox checked={understandsRisk} onChange={(_, checked) => setUnderstandsRisk(checked)} />}
               sx={{ pl: 2 }}
             />

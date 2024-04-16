@@ -24,16 +24,16 @@ describe('FallbackHandler', () => {
   it('should render the Fallback Handler when one is set', async () => {
     jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
       () =>
-        ({
-          safe: {
-            version: '1.3.0',
-            chainId: '5',
-            fallbackHandler: {
-              value: GOERLI_FALLBACK_HANDLER,
-              name: 'FallbackHandlerName',
-            },
+      ({
+        safe: {
+          version: '1.3.0',
+          chainId: '5',
+          fallbackHandler: {
+            value: GOERLI_FALLBACK_HANDLER,
+            name: 'FallbackHandlerName',
           },
-        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+        },
+      } as unknown as ReturnType<typeof useSafeInfoHook.default>),
     )
 
     const fbHandler = render(<FallbackHandler />, {
@@ -61,16 +61,16 @@ describe('FallbackHandler', () => {
 
     jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
       () =>
-        ({
-          safe: {
-            version: '1.3.0',
-            chainId: '10',
-            fallbackHandler: {
-              value: OPTIMISM_FALLBACK_HANDLER,
-              name: 'FallbackHandlerName',
-            },
+      ({
+        safe: {
+          version: '1.3.0',
+          chainId: '10',
+          fallbackHandler: {
+            value: OPTIMISM_FALLBACK_HANDLER,
+            name: 'FallbackHandlerName',
           },
-        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+        },
+      } as unknown as ReturnType<typeof useSafeInfoHook.default>),
     )
 
     const fbHandler = render(<FallbackHandler />, {
@@ -95,15 +95,15 @@ describe('FallbackHandler', () => {
   it('should use the official deployment name if the address is official but no known name is present', async () => {
     jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
       () =>
-        ({
-          safe: {
-            version: '1.3.0',
-            chainId: '5',
-            fallbackHandler: {
-              value: GOERLI_FALLBACK_HANDLER,
-            },
+      ({
+        safe: {
+          version: '1.3.0',
+          chainId: '5',
+          fallbackHandler: {
+            value: GOERLI_FALLBACK_HANDLER,
           },
-        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+        },
+      } as unknown as ReturnType<typeof useSafeInfoHook.default>),
     )
 
     const fbHandler = render(<FallbackHandler />, {
@@ -119,12 +119,12 @@ describe('FallbackHandler', () => {
     it('should render a warning when no Fallback Handler is set', async () => {
       jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
         () =>
-          ({
-            safe: {
-              version: '1.3.0',
-              chainId: '5',
-            },
-          } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+        ({
+          safe: {
+            version: '1.3.0',
+            chainId: '5',
+          },
+        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
       )
 
       const fbHandler = render(<FallbackHandler />)
@@ -132,7 +132,7 @@ describe('FallbackHandler', () => {
       await waitFor(() => {
         expect(
           fbHandler.queryByText(
-            new RegExp('The Safe{Wallet} may not work correctly as no fallback handler is currently set.'),
+            new RegExp('The Bitrock Safe may not work correctly as no fallback handler is currently set.'),
           ),
         ).toBeInTheDocument()
         expect(fbHandler.queryByText('Transaction Builder')).toBeInTheDocument()
@@ -144,12 +144,12 @@ describe('FallbackHandler', () => {
 
       jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
         () =>
-          ({
-            safe: {
-              version: '1.3.0',
-              chainId: '5',
-            },
-          } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+        ({
+          safe: {
+            version: '1.3.0',
+            chainId: '5',
+          },
+        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
       )
 
       const fbHandler = render(<FallbackHandler />)
@@ -157,7 +157,7 @@ describe('FallbackHandler', () => {
       await waitFor(() => {
         expect(
           fbHandler.queryByText(
-            new RegExp('The Safe{Wallet} may not work correctly as no fallback handler is currently set.'),
+            new RegExp('The Bitrock Safe may not work correctly as no fallback handler is currently set.'),
           ),
         ).toBeInTheDocument()
         expect(fbHandler.queryByText('Transaction Builder')).not.toBeInTheDocument()
@@ -169,15 +169,15 @@ describe('FallbackHandler', () => {
     it('should render placeholder and warning when an unofficial Fallback Handler is set', async () => {
       jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
         () =>
-          ({
-            safe: {
-              version: '1.3.0',
-              chainId: '5',
-              fallbackHandler: {
-                value: '0x123',
-              },
+        ({
+          safe: {
+            version: '1.3.0',
+            chainId: '5',
+            fallbackHandler: {
+              value: '0x123',
             },
-          } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+          },
+        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
       )
 
       const fbHandler = render(<FallbackHandler />)
@@ -203,15 +203,15 @@ describe('FallbackHandler', () => {
 
       jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
         () =>
-          ({
-            safe: {
-              version: '1.3.0',
-              chainId: '5',
-              fallbackHandler: {
-                value: '0x123',
-              },
+        ({
+          safe: {
+            version: '1.3.0',
+            chainId: '5',
+            fallbackHandler: {
+              value: '0x123',
             },
-          } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+          },
+        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
       )
 
       const fbHandler = render(<FallbackHandler />)
@@ -226,12 +226,12 @@ describe('FallbackHandler', () => {
   it('should render nothing if the Safe Account version does not support Fallback Handlers', () => {
     jest.spyOn(useSafeInfoHook, 'default').mockImplementation(
       () =>
-        ({
-          safe: {
-            version: '1.0.0',
-            chainId: '5',
-          },
-        } as unknown as ReturnType<typeof useSafeInfoHook.default>),
+      ({
+        safe: {
+          version: '1.0.0',
+          chainId: '5',
+        },
+      } as unknown as ReturnType<typeof useSafeInfoHook.default>),
     )
 
     const fbHandler = render(<FallbackHandler />)
