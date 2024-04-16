@@ -3,8 +3,7 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import lightPalette from '@/components/theme/lightPalette'
 import darkPalette from '@/components/theme/darkPalette'
 
-const descriptionText =
-  'Bitrock Safe is the most trusted platform to manage digital assets on Bitrock.'
+const descriptionText = 'Bitrock Safe is the most trusted platform to manage digital assets on Bitrock.'
 const titleText = 'Bitrock Safe'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (

@@ -1,0 +1,13 @@
+diff --git a/node_modules/@safe-global/safe-core-sdk-utils/dist/src/eip-3770/config.js b/node_modules/@safe-global/safe-core-sdk-utils/dist/src/eip-3770/config.js
+index 7dbddf5..85ac289 100644
+--- a/node_modules/@safe-global/safe-core-sdk-utils/dist/src/eip-3770/config.js
++++ b/node_modules/@safe-global/safe-core-sdk-utils/dist/src/eip-3770/config.js
+@@ -81,6 +81,8 @@ exports.networks = [
+     { chainId: 5001, shortName: 'mantle-testnet' },
+     { chainId: 7341, shortName: 'shyft' },
+     { chainId: 7700, shortName: 'canto' },
++    { chainId: 7171, shortName: 'brock' },
++    { chainId: 7771, shortName: 'brocktest' },
+     { chainId: 8217, shortName: 'cypress' },
+     { chainId: 8453, shortName: 'base' },
+     { chainId: 9000, shortName: 'evmos-testnet' },

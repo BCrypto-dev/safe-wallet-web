@@ -18,17 +18,5 @@ if [ "$initial_status" != "$post_lint_status" ]; then
   exit 1
 fi
 
-# Check if the user wants to run tests on push
-if [ "$RUN_TESTS_ON_PUSH" == "true" ]; then
-  echo "Running tests..."
-  if ! yarn test; then
-    echo "===================================="
-    echo "Tests failed. Guess they need more 'exercise'!"
-    echo "Please fix the issues before pushing or push with --no-verify flag to omit this check."
-    echo "===================================="
-    exit 1
-  fi
-fi
-
 # All goooood in safe's land!
 exit 0

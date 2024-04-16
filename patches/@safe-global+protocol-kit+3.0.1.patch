@@ -1,0 +1,13 @@
+diff --git a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+index cfc40d8..898355f 100644
+--- a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
++++ b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+@@ -113,6 +113,8 @@ exports.networks = [
+     { chainId: 5700n, shortName: 'tsys' },
+     { chainId: 6102n, shortName: 'cascadia' },
+     { chainId: 7001n, shortName: 'zetachain-athens' },
++    { chainId: 7171n, shortName: 'brock' },
++    { chainId: 7771n, shortName: 'brocktest' },
+     { chainId: 7332n, shortName: 'EON' },
+     { chainId: 7341n, shortName: 'shyft' },
+     { chainId: 7700n, shortName: 'canto' },
