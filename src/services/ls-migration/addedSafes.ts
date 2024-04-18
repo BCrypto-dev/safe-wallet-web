@@ -15,8 +15,10 @@ const CHAIN_PREFIXES: Record<string, string> = {
   '246': 'ENERGY_WEB_CHAIN',
   '42161': 'ARBITRUM',
   '73799': 'VOLTA',
+  '7171': 'BITROCK',
+  '7771': 'BITROCK_TESTNET',
 }
-const ALL_CHAINS = ['1', '100', '137', '56', '246', '42161', '1313161554', '43114', '10', '5', '73799']
+const ALL_CHAINS = ['1', '100', '137', '56', '246', '42161', '1313161554', '43114', '10', '5', '73799', '7171', '7771']
 
 const OLD_LS_KEY = '__SAFES'
 

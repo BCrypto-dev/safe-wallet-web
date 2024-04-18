@@ -16,4 +16,13 @@ const chains = networks.reduce<Chains>((result, { shortName, chainId }) => {
   return result
 }, {})
 
+const ChainLogos = {
+  [chains.brock]: '/images/networks/brock.png',
+  [chains.brocktest]: '/images/networks/brock.png',
+}
+
+export const getChainLogo = (chainId: string) => {
+  return ChainLogos[chainId]
+}
+
 export default chains

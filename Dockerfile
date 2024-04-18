@@ -8,7 +8,7 @@ RUN yarn config set network-timeout 300000 && yarn global add node-gyp
 
 # install deps
 RUN yarn install --frozen-lockfile
-RUN yarn after-install
+RUN yarn postinstall
 
 ENV NODE_ENV production
 
