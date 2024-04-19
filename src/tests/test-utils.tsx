@@ -43,21 +43,21 @@ const getProviders: (options: {
   routerProps?: Partial<NextRouter>
   initialReduxState?: Partial<RootState>
 }) => React.FC<{ children: React.ReactElement }> = ({ routerProps, initialReduxState }) =>
-    function ProviderComponent({ children }) {
-      const store = makeStore(initialReduxState)
+  function ProviderComponent({ children }) {
+    const store = makeStore(initialReduxState)
 
-      useHydrateStore(store)
+    useHydrateStore(store)
 
-      return (
-        <Provider store={store}>
-          <RouterContext.Provider value={mockRouter(routerProps)}>
-            <SafeThemeProvider mode="dark">
-              {(safeTheme: Theme) => <ThemeProvider theme={safeTheme}>{children}</ThemeProvider>}
-            </SafeThemeProvider>
-          </RouterContext.Provider>
-        </Provider>
-      )
-    }
+    return (
+      <Provider store={store}>
+        <RouterContext.Provider value={mockRouter(routerProps)}>
+          <SafeThemeProvider mode="dark">
+            {(safeTheme: Theme) => <ThemeProvider theme={safeTheme}>{children}</ThemeProvider>}
+          </SafeThemeProvider>
+        </RouterContext.Provider>
+      </Provider>
+    )
+  }
 
 const customRender = (
   ui: React.ReactElement,
