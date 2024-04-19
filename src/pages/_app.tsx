@@ -78,7 +78,7 @@ const clientSideEmotionCache = createEmotionCache()
 
 export const AppProviders = ({ children }: { children: ReactNode | ReactNode[] }) => {
   const isDarkMode = useDarkMode()
-  const themeMode = isDarkMode ? 'dark' : 'light'
+  const themeMode = 'dark'
 
   return (
     <SafeThemeProvider mode={themeMode}>
