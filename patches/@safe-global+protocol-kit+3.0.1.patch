@@ -1,82 +1,60 @@
 diff --git a/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js b/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
-index 59d054d..8d4a859 100644
+index 59d054d..a68f23e 100644
 --- a/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
 +++ b/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
-@@ -65,6 +65,7 @@ class EthersAdapter {
-     async getSafeContract({ safeVersion, singletonDeployment, customContractAddress }) {
-         const chainId = await this.getChainId();
-         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = '0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552';
-         if (!contractAddress) {
-             throw new Error('Invalid SafeProxy contract address');
-         }
-@@ -73,7 +74,8 @@ class EthersAdapter {
-     }
+@@ -74,6 +74,7 @@ class EthersAdapter {
      async getSafeProxyFactoryContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2';
          if (!contractAddress) {
              throw new Error('Invalid SafeProxyFactory contract address');
          }
-@@ -82,7 +84,8 @@ class EthersAdapter {
-     }
+@@ -83,6 +84,7 @@ class EthersAdapter {
      async getMultiSendContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761';
          if (!contractAddress) {
              throw new Error('Invalid MultiSend contract address');
          }
-@@ -91,7 +94,8 @@ class EthersAdapter {
-     }
+@@ -92,6 +94,7 @@ class EthersAdapter {
      async getMultiSendCallOnlyContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D';
          if (!contractAddress) {
              throw new Error('Invalid MultiSendCallOnly contract address');
          }
-@@ -100,7 +104,8 @@ class EthersAdapter {
-     }
+@@ -101,6 +104,7 @@ class EthersAdapter {
      async getCompatibilityFallbackHandlerContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4';
          if (!contractAddress) {
              throw new Error('Invalid CompatibilityFallbackHandler contract address');
          }
-@@ -109,7 +114,8 @@ class EthersAdapter {
-     }
+@@ -110,6 +114,7 @@ class EthersAdapter {
      async getSignMessageLibContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2';
          if (!contractAddress) {
              throw new Error('Invalid SignMessageLib contract address');
          }
-@@ -118,7 +124,8 @@ class EthersAdapter {
-     }
+@@ -119,6 +124,7 @@ class EthersAdapter {
      async getCreateCallContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4';
          if (!contractAddress) {
              throw new Error('Invalid CreateCall contract address');
          }
-@@ -127,7 +134,8 @@ class EthersAdapter {
-     }
+@@ -128,6 +134,7 @@ class EthersAdapter {
      async getSimulateTxAccessorContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
--        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        //const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        const contractAddress = '0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da';
+         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        //const contractAddress = '0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da';
          if (!contractAddress) {
              throw new Error('Invalid SimulateTxAccessor contract address');
          }
