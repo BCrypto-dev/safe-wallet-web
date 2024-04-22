@@ -1,16 +1,20 @@
 diff --git a/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js b/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
-index 59d054d..8a0b51d 100644
+index 59d054d..6d70c9d 100644
 --- a/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
 +++ b/node_modules/@safe-global/protocol-kit/dist/src/adapters/ethers/EthersAdapter.js
-@@ -65,6 +65,7 @@ class EthersAdapter {
+@@ -64,16 +64,18 @@ class EthersAdapter {
+     }
      async getSafeContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
-         const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
-+        console.log(contractAddress)
+-        const contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
++        let contractAddress = customContractAddress ?? singletonDeployment?.networkAddresses[chainId.toString()];
          if (!contractAddress) {
-             throw new Error('Invalid SafeProxy contract address');
+-            throw new Error('Invalid SafeProxy contract address');
++            contractAddress = '0x3E5c63644E683549055b9Be8653de26E0B4CD36E';
++            //throw new Error('Invalid SafeProxy contract address');
          }
-@@ -73,7 +74,8 @@ class EthersAdapter {
+         const signerOrProvider = __classPrivateFieldGet(this, _EthersAdapter_signer, "f") || __classPrivateFieldGet(this, _EthersAdapter_provider, "f");
+         return (0, contractInstancesEthers_1.getSafeContractInstance)(safeVersion, contractAddress, signerOrProvider);
      }
      async getSafeProxyFactoryContract({ safeVersion, singletonDeployment, customContractAddress }) {
          const chainId = await this.getChainId();
