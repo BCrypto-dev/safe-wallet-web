@@ -100,10 +100,10 @@ const NetworkSelector = (props: { onChainSelect?: () => void }): ReactElement =>
           },
           ...(isDarkMode
             ? {
-                '& .Mui-selected, & .Mui-selected:hover': {
-                  backgroundColor: `${theme.palette.secondary.background} !important`,
-                },
-              }
+              '& .Mui-selected, & .Mui-selected:hover': {
+                backgroundColor: `${theme.palette.secondary.background} !important`,
+              },
+            }
             : {}),
         },
       }}
@@ -114,8 +114,6 @@ const NetworkSelector = (props: { onChainSelect?: () => void }): ReactElement =>
       }}
     >
       {prodNets.map((chain) => renderMenuItem(chain.chainId, chain))}
-      <ListSubheader className={css.listSubHeader}>Testnets</ListSubheader>
-      {testNets.map((chain) => renderMenuItem(chain.chainId, chain))}
     </Select>
   ) : (
     <Skeleton width={94} height={31} sx={{ mx: 2 }} />
