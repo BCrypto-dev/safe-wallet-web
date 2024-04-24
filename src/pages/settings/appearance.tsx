@@ -1,10 +1,11 @@
-import { Checkbox, FormControlLabel, FormGroup, Grid, Paper, Typography, Switch } from '@mui/material'
+import { Checkbox, FormControlLabel, FormGroup, Grid, Paper, Typography } from '@mui/material'
 import type { ChangeEvent } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { useAppDispatch, useAppSelector } from '@/store'
-import { selectSettings, setCopyShortName, setDarkMode } from '@/store/settingsSlice'
+import type { setDarkMode } from '@/store/settingsSlice'
+import { selectSettings, setCopyShortName } from '@/store/settingsSlice'
 import SettingsHeader from '@/components/settings/SettingsHeader'
 import { trackEvent, SETTINGS_EVENTS } from '@/services/analytics'
 import { useDarkMode } from '@/hooks/useDarkMode'
