@@ -65,26 +65,6 @@ const Appearance: NextPage = () => {
               </FormGroup>
             </Grid>
           </Grid>
-
-          <Grid container alignItems="center" marginTop={2} spacing={3}>
-            <Grid item lg={4} xs={12}>
-              <Typography variant="h4" fontWeight="bold">
-                Theme
-              </Typography>
-            </Grid>
-
-            <Grid item xs>
-              <FormControlLabel
-                control={
-                  <Switch
-                    checked={isDarkMode}
-                    onChange={handleToggle(setDarkMode, SETTINGS_EVENTS.APPEARANCE.DARK_MODE)}
-                  />
-                }
-                label="Dark mode"
-              />
-            </Grid>
-          </Grid>
         </Paper>
       </main>
     </>
