@@ -31,9 +31,9 @@ export const SAFE_COMPATIBLE_EVENTS = ['chainChanged', 'accountsChanged']
 
 export const SAFE_WALLET_METADATA = {
   name: 'Bitrock Safe',
-  url: 'https://app.safe.global',
+  url: 'https://devsafe.bit-rock.io',
   description: 'Smart contract wallet for Ethereum',
-  icons: ['https://app.safe.global/images/logo-round.svg'],
+  icons: ['https://devsafe.bit-rock.io/images/logo-round.svg'],
 }
 
 export const EIP155 = 'eip155' as const
